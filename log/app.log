@@ -1,0 +1,1159 @@
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/ubuntu/python-web/www/app.py: ENOENT
+supervisor: child process was not spawned
+INFO:root:zzzzzzzzzzzzzzzzzzzzzzzzzz
+INFO:root:ssssssssssssssssssssssssssssssssss
+INFO:root:Model
+INFO:root:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+INFO:root:yyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+INFO:root:ssssssssssssssssssssssssssssssssss
+INFO:root:User
+INFO:root:found model: User (table: users)
+INFO:root:found mapping: created_at ===> <FloatField, real, None>
+INFO:root:found mapping: email ===> <StringField, varchar(50), None>
+INFO:root:found mapping: image ===> <StringField, varchar(500), None>
+INFO:root:found mapping: id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: admin ===> <BooleanField, boolean, None>
+INFO:root:found mapping: name ===> <StringField, varchar(50), None>
+INFO:root:found mapping: passwd ===> <StringField, varchar(50), None>
+INFO:root:ssssssssssssssssssssssssssssssssss
+INFO:root:Blog
+INFO:root:found model: Blog (table: blogs)
+INFO:root:found mapping: user_image ===> <StringField, varchar(500), None>
+INFO:root:found mapping: summary ===> <StringField, varchar(200), None>
+INFO:root:found mapping: id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: content ===> <TextField, text, None>
+INFO:root:found mapping: user_id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: user_name ===> <StringField, varchar(50), None>
+INFO:root:found mapping: created_at ===> <FloatField, real, None>
+INFO:root:found mapping: name ===> <StringField, varchar(50), None>
+INFO:root:ssssssssssssssssssssssssssssssssss
+INFO:root:Comment
+INFO:root:found model: Comment (table: comments)
+INFO:root:found mapping: user_image ===> <StringField, varchar(500), None>
+INFO:root:found mapping: id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: content ===> <TextField, text, None>
+INFO:root:found mapping: user_id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: user_name ===> <StringField, varchar(50), None>
+INFO:root:found mapping: created_at ===> <FloatField, real, None>
+INFO:root:found mapping: blog_id ===> <StringField, varchar(50), None>
+INFO:root:create database connection pool...
+INFO:root:init jinja2....
+INFO:root:set jinja2 template path: /home/ubuntu/python-web/www/templates
+INFO:root:add route GET /api/blogs => api_blogs(page)
+INFO:root:add route GET /api/comments => api_comments(page)
+INFO:root:add route POST /api/blogs => api_create_blog(request,name,summary,content)
+INFO:root:add route POST /api/blogs/{id}/comments => api_create_comment(id,request,content)
+INFO:root:add route POST /api/blogs/{id}/delete => api_delete_blog(request,id)
+INFO:root:add route POST /api/comments/{id}/delete => api_delete_comment(id,request)
+INFO:root:add route GET /api/blogs/{id} => api_get_blog(id)
+INFO:root:add route GET /api/users => api_get_users(page)
+INFO:root:add route POST /api/users => api_register_user(email,name,passwd)
+INFO:root:add route POST /api/blogs/{id} => api_update_blog(id,request,name,summary,content)
+INFO:root:add route POST /api/authenticate => authenticate(email,passwd)
+INFO:root:add route GET /blog/{id} => get_blog(id)
+INFO:root:add route GET / => index(page)
+INFO:root:add route GET /manage/ => manage()
+INFO:root:add route GET /manage/blogs => manage_blogs(page)
+INFO:root:add route GET /manage/comments => manage_comments(page)
+INFO:root:add route GET /manage/blogs/create => manage_create_blog()
+INFO:root:add route GET /manage/blogs/edit => manage_edit_blog(id)
+INFO:root:add route GET /manage/users => manage_users(page)
+INFO:root:add route GET /register => register()
+INFO:root:add route GET /signin => signin()
+INFO:root:add route GET /signout => signout(request)
+INFO:root:add static /static/ => /home/ubuntu/python-web/www/static
+INFO:root:server started at http://115.159.219.141:8000...
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f1c1a60fc18>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f1c19dae1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f1c19dae158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_image`, `summary`, `content`, `user_id`, `user_name`, `created_at`, `name` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, '__template__': 'blogs.html', 'blogs': [{'summary': '111111111111', 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'content': '1111111111111111', 'user_image': 'about:blank', 'created_at': 1465634082.40179, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': '111'}, {'summary': '44', 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'content': '44', 'user_image': 'about:blank', 'created_at': 1465632830.38918, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': 'test'}, {'summary': '11', 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'content': '111', 'user_image': 'about:blank', 'created_at': 1465568962.27501, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '11'}, {'summary': '111111111111111111', 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'created_at': 1465567528.94303, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '王晓东'}]}
+INFO:aiohttp.access:61.151.186.141 - - [12/Jun/2016:19:53:32 +0000] "GET / HTTP/1.0" 200 5626 "-" "-"
+INFO:root:Request: GET /nice ports,/Trinity.txt.bak 
+INFO:root:<generator object text at 0x7f1c19dc5558>
+INFO:root:check user: GET /nice ports,/Trinity.txt.bak
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<bound method SystemRoute._handler of <SystemRoute 404: Not Found>>
+INFO:aiohttp.access:61.151.186.141 - - [12/Jun/2016:19:53:37 +0000] "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0" 404 14 "-" "-"
+ERROR:aiohttp.access:Error in logging
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/server.py", line 234, in start
+    yield from prefix.read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 591, in read
+    result = yield from super().read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 446, in read
+    yield from self._waiter
+  File "/usr/lib/python3.4/asyncio/futures.py", line 386, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.4/asyncio/tasks.py", line 287, in _wakeup
+    value = future.result()
+  File "/usr/lib/python3.4/asyncio/futures.py", line 275, in result
+    raise self._exception
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 139, in feed_data
+    self._parser.send(data)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/protocol.py", line 146, in __call__
+    raw_data = yield from buf.waituntil(b' ', 12)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 448, in waituntil
+    'Line is too long. %s' % bytes(self._data), limit)
+aiohttp.errors.LineLimitExceededParserError: Line is too long. b'\x05\x04\x00\x01\x02\x80\x05\x01\x00\x03\ngoogle.com\x00PGET / HTTP/1.0\r\n\r\n'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 365, in log
+    [message, environ, response, transport, time]))
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in _format_line
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in <genexpr>
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 301, in _format_i
+    return args[0].headers.get(multidict.upstr(key), '-')
+AttributeError: 'NoneType' object has no attribute 'headers'
+ERROR:aiohttp.access:Error in logging
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/server.py", line 234, in start
+    yield from prefix.read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 591, in read
+    result = yield from super().read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 446, in read
+    yield from self._waiter
+  File "/usr/lib/python3.4/asyncio/futures.py", line 386, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.4/asyncio/tasks.py", line 287, in _wakeup
+    value = future.result()
+  File "/usr/lib/python3.4/asyncio/futures.py", line 275, in result
+    raise self._exception
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 139, in feed_data
+    self._parser.send(data)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/protocol.py", line 146, in __call__
+    raw_data = yield from buf.waituntil(b' ', 12)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 454, in waituntil
+    'Line is too long. %s' % bytes(self._data), limit)
+aiohttp.errors.LineLimitExceededParserError: Line is too long. b'\x04\x01\x00\x16\x7f\x00\x00\x01root\x00'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 365, in log
+    [message, environ, response, transport, time]))
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in _format_line
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in <genexpr>
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 301, in _format_i
+    return args[0].headers.get(multidict.upstr(key), '-')
+AttributeError: 'NoneType' object has no attribute 'headers'
+ERROR:aiohttp.access:Error in logging
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/server.py", line 234, in start
+    yield from prefix.read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 591, in read
+    result = yield from super().read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 446, in read
+    yield from self._waiter
+  File "/usr/lib/python3.4/asyncio/futures.py", line 386, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.4/asyncio/tasks.py", line 287, in _wakeup
+    value = future.result()
+  File "/usr/lib/python3.4/asyncio/futures.py", line 275, in result
+    raise self._exception
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 139, in feed_data
+    self._parser.send(data)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/protocol.py", line 146, in __call__
+    raw_data = yield from buf.waituntil(b' ', 12)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 454, in waituntil
+    'Line is too long. %s' % bytes(self._data), limit)
+aiohttp.errors.LineLimitExceededParserError: Line is too long. b'A\x00\x00\x00:0\x00\x00\xff\xff\xff\xff\xd4\x07\x00\x00\x00\x00\x00\x00test.$cmd\x00\x00\x00\x00\x00\xff\xff\xff\xff\x1b\x00\x00\x00\x01serverStatus\x00\x00\x00\x00\x00\x00\x00\xf0?\x00'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 365, in log
+    [message, environ, response, transport, time]))
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in _format_line
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in <genexpr>
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 301, in _format_i
+    return args[0].headers.get(multidict.upstr(key), '-')
+AttributeError: 'NoneType' object has no attribute 'headers'
+ERROR:aiohttp.access:Error in logging
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/server.py", line 234, in start
+    yield from prefix.read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 591, in read
+    result = yield from super().read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 446, in read
+    yield from self._waiter
+  File "/usr/lib/python3.4/asyncio/futures.py", line 386, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.4/asyncio/tasks.py", line 287, in _wakeup
+    value = future.result()
+  File "/usr/lib/python3.4/asyncio/futures.py", line 275, in result
+    raise self._exception
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 139, in feed_data
+    self._parser.send(data)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/protocol.py", line 146, in __call__
+    raw_data = yield from buf.waituntil(b' ', 12)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 454, in waituntil
+    'Line is too long. %s' % bytes(self._data), limit)
+aiohttp.errors.LineLimitExceededParserError: Line is too long. b'\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G\xd7\xf7\xba,\xee\xea\xb2`~\xf3\x00\xfd\x82{\xb9\xd5\x96\xc8w\x9b\xe6\xc4\xdb<=\xdbo\xef\x10n\x00\x00(\x00\x16\x00\x13\x00\n\x00f\x00\x05\x00\x04\x00e\x00d\x00c\x00b\x00a\x00`\x00\x15\x00\x12\x00\t\x00\x14\x00\x11\x00\x08\x00\x06\x00\x03\x01\x00'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 365, in log
+    [message, environ, response, transport, time]))
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in _format_line
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in <genexpr>
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 301, in _format_i
+    return args[0].headers.get(multidict.upstr(key), '-')
+AttributeError: 'NoneType' object has no attribute 'headers'
+ERROR:aiohttp.access:Error in logging
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/server.py", line 234, in start
+    yield from prefix.read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 591, in read
+    result = yield from super().read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 446, in read
+    yield from self._waiter
+  File "/usr/lib/python3.4/asyncio/futures.py", line 386, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.4/asyncio/tasks.py", line 287, in _wakeup
+    value = future.result()
+  File "/usr/lib/python3.4/asyncio/futures.py", line 275, in result
+    raise self._exception
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 139, in feed_data
+    self._parser.send(data)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/protocol.py", line 146, in __call__
+    raw_data = yield from buf.waituntil(b' ', 12)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 454, in waituntil
+    'Line is too long. %s' % bytes(self._data), limit)
+aiohttp.errors.LineLimitExceededParserError: Line is too long. b'\x80\x00\x00(\x18\xd1\xbd\x86\x00\x00\x00\x00\x00\x00\x00\x02\x00\x01\x86\xa0\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 365, in log
+    [message, environ, response, transport, time]))
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in _format_line
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in <genexpr>
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 301, in _format_i
+    return args[0].headers.get(multidict.upstr(key), '-')
+AttributeError: 'NoneType' object has no attribute 'headers'
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f1c1a60faf8>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f1c19dae1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f1c19dae158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_image`, `summary`, `content`, `user_id`, `user_name`, `created_at`, `name` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, '__template__': 'blogs.html', 'blogs': [{'summary': '111111111111', 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'content': '1111111111111111', 'user_image': 'about:blank', 'created_at': 1465634082.40179, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': '111'}, {'summary': '44', 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'content': '44', 'user_image': 'about:blank', 'created_at': 1465632830.38918, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': 'test'}, {'summary': '11', 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'content': '111', 'user_image': 'about:blank', 'created_at': 1465568962.27501, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '11'}, {'summary': '111111111111111111', 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'created_at': 1465567528.94303, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '王晓东'}]}
+INFO:aiohttp.access:101.226.103.146 - - [12/Jun/2016:20:00:32 +0000] "GET / HTTP/1.1" 200 5626 "-" "libwww-perl/6.04"
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f1c19532d80>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f1c19dae1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f1c19dae158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_image`, `summary`, `content`, `user_id`, `user_name`, `created_at`, `name` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, '__template__': 'blogs.html', 'blogs': [{'summary': '111111111111', 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'content': '1111111111111111', 'user_image': 'about:blank', 'created_at': 1465634082.40179, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': '111'}, {'summary': '44', 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'content': '44', 'user_image': 'about:blank', 'created_at': 1465632830.38918, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': 'test'}, {'summary': '11', 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'content': '111', 'user_image': 'about:blank', 'created_at': 1465568962.27501, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '11'}, {'summary': '111111111111111111', 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'created_at': 1465567528.94303, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '王晓东'}]}
+INFO:aiohttp.access:101.226.103.146 - - [12/Jun/2016:20:00:32 +0000] "GET / HTTP/1.1" 200 5626 "-" "libwww-perl/6.04"
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f1c19532e58>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f1c19dae1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f1c19dae158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_image`, `summary`, `content`, `user_id`, `user_name`, `created_at`, `name` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, '__template__': 'blogs.html', 'blogs': [{'summary': '111111111111', 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'content': '1111111111111111', 'user_image': 'about:blank', 'created_at': 1465634082.40179, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': '111'}, {'summary': '44', 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'content': '44', 'user_image': 'about:blank', 'created_at': 1465632830.38918, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': 'test'}, {'summary': '11', 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'content': '111', 'user_image': 'about:blank', 'created_at': 1465568962.27501, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '11'}, {'summary': '111111111111111111', 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'created_at': 1465567528.94303, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '王晓东'}]}
+INFO:aiohttp.access:101.226.103.146 - - [12/Jun/2016:20:00:32 +0000] "GET / HTTP/1.1" 200 5626 "-" "libwww-perl/6.04"
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f1c19532dc8>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f1c19dae1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f1c19dae158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_image`, `summary`, `content`, `user_id`, `user_name`, `created_at`, `name` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, '__template__': 'blogs.html', 'blogs': [{'summary': '111111111111', 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'content': '1111111111111111', 'user_image': 'about:blank', 'created_at': 1465634082.40179, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': '111'}, {'summary': '44', 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'content': '44', 'user_image': 'about:blank', 'created_at': 1465632830.38918, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': 'test'}, {'summary': '11', 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'content': '111', 'user_image': 'about:blank', 'created_at': 1465568962.27501, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '11'}, {'summary': '111111111111111111', 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'created_at': 1465567528.94303, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '王晓东'}]}
+INFO:aiohttp.access:101.226.103.146 - - [12/Jun/2016:20:30:30 +0000] "GET / HTTP/1.1" 200 5626 "-" "libwww-perl/6.04"
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f1c19532e10>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f1c19dae1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f1c19dae158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_image`, `summary`, `content`, `user_id`, `user_name`, `created_at`, `name` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, '__template__': 'blogs.html', 'blogs': [{'summary': '111111111111', 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'content': '1111111111111111', 'user_image': 'about:blank', 'created_at': 1465634082.40179, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': '111'}, {'summary': '44', 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'content': '44', 'user_image': 'about:blank', 'created_at': 1465632830.38918, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': 'test'}, {'summary': '11', 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'content': '111', 'user_image': 'about:blank', 'created_at': 1465568962.27501, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '11'}, {'summary': '111111111111111111', 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'created_at': 1465567528.94303, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '王晓东'}]}
+INFO:aiohttp.access:101.226.103.146 - - [12/Jun/2016:20:30:30 +0000] "GET / HTTP/1.1" 200 5626 "-" "libwww-perl/6.04"
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f1c19532d38>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f1c19dae1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f1c19dae158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_image`, `summary`, `content`, `user_id`, `user_name`, `created_at`, `name` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, '__template__': 'blogs.html', 'blogs': [{'summary': '111111111111', 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'content': '1111111111111111', 'user_image': 'about:blank', 'created_at': 1465634082.40179, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': '111'}, {'summary': '44', 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'content': '44', 'user_image': 'about:blank', 'created_at': 1465632830.38918, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': 'test'}, {'summary': '11', 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'content': '111', 'user_image': 'about:blank', 'created_at': 1465568962.27501, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '11'}, {'summary': '111111111111111111', 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'created_at': 1465567528.94303, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '王晓东'}]}
+INFO:aiohttp.access:101.226.103.146 - - [12/Jun/2016:20:30:30 +0000] "GET / HTTP/1.1" 200 5626 "-" "libwww-perl/6.04"
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f1c19532fc0>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f1c19dae1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f1c19dae158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_image`, `summary`, `content`, `user_id`, `user_name`, `created_at`, `name` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, '__template__': 'blogs.html', 'blogs': [{'summary': '111111111111', 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'content': '1111111111111111', 'user_image': 'about:blank', 'created_at': 1465634082.40179, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': '111'}, {'summary': '44', 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'content': '44', 'user_image': 'about:blank', 'created_at': 1465632830.38918, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': 'test'}, {'summary': '11', 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'content': '111', 'user_image': 'about:blank', 'created_at': 1465568962.27501, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '11'}, {'summary': '111111111111111111', 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'created_at': 1465567528.94303, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '王晓东'}]}
+INFO:aiohttp.access:183.60.48.110 - - [12/Jun/2016:20:30:34 +0000] "GET / HTTP/1.1" 200 5626 "-" "libwww-perl/6.04"
+INFO:root:Request: GET //www.baidu.com/cache/global/img/gs.gif 
+INFO:root:<generator object text at 0x7f1c19532f78>
+INFO:root:check user: GET //www.baidu.com/cache/global/img/gs.gif
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<bound method SystemRoute._handler of <SystemRoute 404: Not Found>>
+INFO:aiohttp.access:80.82.78.38 - - [12/Jun/2016:20:40:11 +0000] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 14 "-" "Mozilla"
+INFO:root:Request: GET //www.baidu.com/cache/global/img/gs.gif 
+INFO:root:<generator object text at 0x7f1c19dc5240>
+INFO:root:check user: GET //www.baidu.com/cache/global/img/gs.gif
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<bound method SystemRoute._handler of <SystemRoute 404: Not Found>>
+INFO:aiohttp.access:172.82.166.210 - - [12/Jun/2016:21:48:26 +0000] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 14 "-" "Mozilla"
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f1c19542288>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f1c19dae1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f1c19dae158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_image`, `summary`, `content`, `user_id`, `user_name`, `created_at`, `name` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, '__template__': 'blogs.html', 'blogs': [{'summary': '111111111111', 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'content': '1111111111111111', 'user_image': 'about:blank', 'created_at': 1465634082.40179, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': '111'}, {'summary': '44', 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'content': '44', 'user_image': 'about:blank', 'created_at': 1465632830.38918, 'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'user_name': '123', 'name': 'test'}, {'summary': '11', 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'content': '111', 'user_image': 'about:blank', 'created_at': 1465568962.27501, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '11'}, {'summary': '111111111111111111', 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'created_at': 1465567528.94303, 'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'user_name': 'ww', 'name': '王晓东'}]}
+INFO:aiohttp.access:182.140.135.52 - - [12/Jun/2016:23:48:37 +0000] "GET / HTTP/1.0" 200 5626 "-" "-"
+INFO:root:Request: GET /nice ports,/Trinity.txt.bak 
+INFO:root:<generator object text at 0x7f1c19dc5318>
+INFO:root:check user: GET /nice ports,/Trinity.txt.bak
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<bound method SystemRoute._handler of <SystemRoute 404: Not Found>>
+INFO:aiohttp.access:182.140.135.52 - - [12/Jun/2016:23:48:42 +0000] "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0" 404 14 "-" "-"
+ERROR:aiohttp.access:Error in logging
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/server.py", line 234, in start
+    yield from prefix.read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 591, in read
+    result = yield from super().read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 446, in read
+    yield from self._waiter
+  File "/usr/lib/python3.4/asyncio/futures.py", line 386, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.4/asyncio/tasks.py", line 287, in _wakeup
+    value = future.result()
+  File "/usr/lib/python3.4/asyncio/futures.py", line 275, in result
+    raise self._exception
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 139, in feed_data
+    self._parser.send(data)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/protocol.py", line 146, in __call__
+    raw_data = yield from buf.waituntil(b' ', 12)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 448, in waituntil
+    'Line is too long. %s' % bytes(self._data), limit)
+aiohttp.errors.LineLimitExceededParserError: Line is too long. b'\x05\x04\x00\x01\x02\x80\x05\x01\x00\x03\ngoogle.com\x00PGET / HTTP/1.0\r\n\r\n'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 365, in log
+    [message, environ, response, transport, time]))
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in _format_line
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in <genexpr>
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 301, in _format_i
+    return args[0].headers.get(multidict.upstr(key), '-')
+AttributeError: 'NoneType' object has no attribute 'headers'
+ERROR:aiohttp.access:Error in logging
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/server.py", line 234, in start
+    yield from prefix.read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 591, in read
+    result = yield from super().read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 446, in read
+    yield from self._waiter
+  File "/usr/lib/python3.4/asyncio/futures.py", line 386, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.4/asyncio/tasks.py", line 287, in _wakeup
+    value = future.result()
+  File "/usr/lib/python3.4/asyncio/futures.py", line 275, in result
+    raise self._exception
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 139, in feed_data
+    self._parser.send(data)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/protocol.py", line 146, in __call__
+    raw_data = yield from buf.waituntil(b' ', 12)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 454, in waituntil
+    'Line is too long. %s' % bytes(self._data), limit)
+aiohttp.errors.LineLimitExceededParserError: Line is too long. b'\x04\x01\x00\x16\x7f\x00\x00\x01root\x00'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 365, in log
+    [message, environ, response, transport, time]))
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in _format_line
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in <genexpr>
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 301, in _format_i
+    return args[0].headers.get(multidict.upstr(key), '-')
+AttributeError: 'NoneType' object has no attribute 'headers'
+ERROR:aiohttp.access:Error in logging
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/server.py", line 234, in start
+    yield from prefix.read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 591, in read
+    result = yield from super().read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 446, in read
+    yield from self._waiter
+  File "/usr/lib/python3.4/asyncio/futures.py", line 386, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.4/asyncio/tasks.py", line 287, in _wakeup
+    value = future.result()
+  File "/usr/lib/python3.4/asyncio/futures.py", line 275, in result
+    raise self._exception
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 139, in feed_data
+    self._parser.send(data)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/protocol.py", line 146, in __call__
+    raw_data = yield from buf.waituntil(b' ', 12)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 454, in waituntil
+    'Line is too long. %s' % bytes(self._data), limit)
+aiohttp.errors.LineLimitExceededParserError: Line is too long. b'A\x00\x00\x00:0\x00\x00\xff\xff\xff\xff\xd4\x07\x00\x00\x00\x00\x00\x00test.$cmd\x00\x00\x00\x00\x00\xff\xff\xff\xff\x1b\x00\x00\x00\x01serverStatus\x00\x00\x00\x00\x00\x00\x00\xf0?\x00'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 365, in log
+    [message, environ, response, transport, time]))
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in _format_line
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in <genexpr>
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 301, in _format_i
+    return args[0].headers.get(multidict.upstr(key), '-')
+AttributeError: 'NoneType' object has no attribute 'headers'
+ERROR:aiohttp.access:Error in logging
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/server.py", line 234, in start
+    yield from prefix.read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 591, in read
+    result = yield from super().read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 446, in read
+    yield from self._waiter
+  File "/usr/lib/python3.4/asyncio/futures.py", line 386, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.4/asyncio/tasks.py", line 287, in _wakeup
+    value = future.result()
+  File "/usr/lib/python3.4/asyncio/futures.py", line 275, in result
+    raise self._exception
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 139, in feed_data
+    self._parser.send(data)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/protocol.py", line 146, in __call__
+    raw_data = yield from buf.waituntil(b' ', 12)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 454, in waituntil
+    'Line is too long. %s' % bytes(self._data), limit)
+aiohttp.errors.LineLimitExceededParserError: Line is too long. b'\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G\xd7\xf7\xba,\xee\xea\xb2`~\xf3\x00\xfd\x82{\xb9\xd5\x96\xc8w\x9b\xe6\xc4\xdb<=\xdbo\xef\x10n\x00\x00(\x00\x16\x00\x13\x00\n\x00f\x00\x05\x00\x04\x00e\x00d\x00c\x00b\x00a\x00`\x00\x15\x00\x12\x00\t\x00\x14\x00\x11\x00\x08\x00\x06\x00\x03\x01\x00'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 365, in log
+    [message, environ, response, transport, time]))
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in _format_line
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in <genexpr>
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 301, in _format_i
+    return args[0].headers.get(multidict.upstr(key), '-')
+AttributeError: 'NoneType' object has no attribute 'headers'
+ERROR:aiohttp.access:Error in logging
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/server.py", line 234, in start
+    yield from prefix.read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 591, in read
+    result = yield from super().read()
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/streams.py", line 446, in read
+    yield from self._waiter
+  File "/usr/lib/python3.4/asyncio/futures.py", line 386, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.4/asyncio/tasks.py", line 287, in _wakeup
+    value = future.result()
+  File "/usr/lib/python3.4/asyncio/futures.py", line 275, in result
+    raise self._exception
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 139, in feed_data
+    self._parser.send(data)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/protocol.py", line 146, in __call__
+    raw_data = yield from buf.waituntil(b' ', 12)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/parsers.py", line 454, in waituntil
+    'Line is too long. %s' % bytes(self._data), limit)
+aiohttp.errors.LineLimitExceededParserError: Line is too long. b'\x80\x00\x00("yi&\x00\x00\x00\x00\x00\x00\x00\x02\x00\x01\x86\xa0\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 365, in log
+    [message, environ, response, transport, time]))
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in _format_line
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 352, in <genexpr>
+    return tuple(m(args) for m in self._methods)
+  File "/usr/local/lib/python3.4/dist-packages/aiohttp/helpers.py", line 301, in _format_i
+    return args[0].headers.get(multidict.upstr(key), '-')
+AttributeError: 'NoneType' object has no attribute 'headers'
+INFO:root:Request: GET //www.baidu.com/cache/global/img/gs.gif 
+INFO:root:<generator object text at 0x7f1c1a60fbd0>
+INFO:root:check user: GET //www.baidu.com/cache/global/img/gs.gif
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<bound method SystemRoute._handler of <SystemRoute 404: Not Found>>
+INFO:aiohttp.access:80.82.78.38 - - [13/Jun/2016:00:40:10 +0000] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 14 "-" "Mozilla"
+INFO:root:zzzzzzzzzzzzzzzzzzzzzzzzzz
+INFO:root:ssssssssssssssssssssssssssssssssss
+INFO:root:Model
+INFO:root:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+INFO:root:yyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+INFO:root:ssssssssssssssssssssssssssssssssss
+INFO:root:User
+INFO:root:found model: User (table: users)
+INFO:root:found mapping: passwd ===> <StringField, varchar(50), None>
+INFO:root:found mapping: id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: name ===> <StringField, varchar(50), None>
+INFO:root:found mapping: email ===> <StringField, varchar(50), None>
+INFO:root:found mapping: admin ===> <BooleanField, boolean, None>
+INFO:root:found mapping: created_at ===> <FloatField, real, None>
+INFO:root:found mapping: image ===> <StringField, varchar(500), None>
+INFO:root:ssssssssssssssssssssssssssssssssss
+INFO:root:Blog
+INFO:root:found model: Blog (table: blogs)
+INFO:root:found mapping: user_name ===> <StringField, varchar(50), None>
+INFO:root:found mapping: id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: name ===> <StringField, varchar(50), None>
+INFO:root:found mapping: user_id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: content ===> <TextField, text, None>
+INFO:root:found mapping: summary ===> <StringField, varchar(200), None>
+INFO:root:found mapping: user_image ===> <StringField, varchar(500), None>
+INFO:root:found mapping: created_at ===> <FloatField, real, None>
+INFO:root:ssssssssssssssssssssssssssssssssss
+INFO:root:Comment
+INFO:root:found model: Comment (table: comments)
+INFO:root:found mapping: user_name ===> <StringField, varchar(50), None>
+INFO:root:found mapping: id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: blog_id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: user_id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: content ===> <TextField, text, None>
+INFO:root:found mapping: user_image ===> <StringField, varchar(500), None>
+INFO:root:found mapping: created_at ===> <FloatField, real, None>
+INFO:root:create database connection pool...
+INFO:root:init jinja2....
+INFO:root:set jinja2 template path: /home/ubuntu/python-web/www/templates
+INFO:root:add route GET /api/blogs => api_blogs(page)
+INFO:root:add route GET /api/comments => api_comments(page)
+INFO:root:add route POST /api/blogs => api_create_blog(request,name,summary,content)
+INFO:root:add route POST /api/blogs/{id}/comments => api_create_comment(id,request,content)
+INFO:root:add route POST /api/blogs/{id}/delete => api_delete_blog(request,id)
+INFO:root:add route POST /api/comments/{id}/delete => api_delete_comment(id,request)
+INFO:root:add route GET /api/blogs/{id} => api_get_blog(id)
+INFO:root:add route GET /api/users => api_get_users(page)
+INFO:root:add route POST /api/users => api_register_user(email,name,passwd)
+INFO:root:add route POST /api/blogs/{id} => api_update_blog(id,request,name,summary,content)
+INFO:root:add route POST /api/authenticate => authenticate(email,passwd)
+INFO:root:add route GET /blog/{id} => get_blog(id)
+INFO:root:add route GET / => index(page)
+INFO:root:add route GET /manage/ => manage()
+INFO:root:add route GET /manage/blogs => manage_blogs(page)
+INFO:root:add route GET /manage/comments => manage_comments(page)
+INFO:root:add route GET /manage/blogs/create => manage_create_blog()
+INFO:root:add route GET /manage/blogs/edit => manage_edit_blog(id)
+INFO:root:add route GET /manage/users => manage_users(page)
+INFO:root:add route GET /register => register()
+INFO:root:add route GET /signin => signin()
+INFO:root:add route GET /signout => signout(request)
+INFO:root:add static /static/ => /home/ubuntu/python-web/www/static
+INFO:root:server started at http://115.159.219.141:8000...
+INFO:root:zzzzzzzzzzzzzzzzzzzzzzzzzz
+INFO:root:ssssssssssssssssssssssssssssssssss
+INFO:root:Model
+INFO:root:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+INFO:root:yyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+INFO:root:ssssssssssssssssssssssssssssssssss
+INFO:root:User
+INFO:root:found model: User (table: users)
+INFO:root:found mapping: email ===> <StringField, varchar(50), None>
+INFO:root:found mapping: created_at ===> <FloatField, real, None>
+INFO:root:found mapping: id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: name ===> <StringField, varchar(50), None>
+INFO:root:found mapping: admin ===> <BooleanField, boolean, None>
+INFO:root:found mapping: image ===> <StringField, varchar(500), None>
+INFO:root:found mapping: passwd ===> <StringField, varchar(50), None>
+INFO:root:ssssssssssssssssssssssssssssssssss
+INFO:root:Blog
+INFO:root:found model: Blog (table: blogs)
+INFO:root:found mapping: user_id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: created_at ===> <FloatField, real, None>
+INFO:root:found mapping: id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: user_name ===> <StringField, varchar(50), None>
+INFO:root:found mapping: name ===> <StringField, varchar(50), None>
+INFO:root:found mapping: content ===> <TextField, text, None>
+INFO:root:found mapping: user_image ===> <StringField, varchar(500), None>
+INFO:root:found mapping: summary ===> <StringField, varchar(200), None>
+INFO:root:ssssssssssssssssssssssssssssssssss
+INFO:root:Comment
+INFO:root:found model: Comment (table: comments)
+INFO:root:found mapping: user_id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: created_at ===> <FloatField, real, None>
+INFO:root:found mapping: id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: blog_id ===> <StringField, varchar(50), None>
+INFO:root:found mapping: user_name ===> <StringField, varchar(50), None>
+INFO:root:found mapping: content ===> <TextField, text, None>
+INFO:root:found mapping: user_image ===> <StringField, varchar(500), None>
+INFO:root:create database connection pool...
+INFO:root:init jinja2....
+INFO:root:set jinja2 template path: /home/ubuntu/python-web/www/templates
+INFO:root:add route GET /api/blogs => api_blogs(page)
+INFO:root:add route GET /api/comments => api_comments(page)
+INFO:root:add route POST /api/blogs => api_create_blog(request,name,summary,content)
+INFO:root:add route POST /api/blogs/{id}/comments => api_create_comment(id,request,content)
+INFO:root:add route POST /api/blogs/{id}/delete => api_delete_blog(request,id)
+INFO:root:add route POST /api/comments/{id}/delete => api_delete_comment(id,request)
+INFO:root:add route GET /api/blogs/{id} => api_get_blog(id)
+INFO:root:add route GET /api/users => api_get_users(page)
+INFO:root:add route POST /api/users => api_register_user(email,name,passwd)
+INFO:root:add route POST /api/blogs/{id} => api_update_blog(id,request,name,summary,content)
+INFO:root:add route POST /api/authenticate => authenticate(email,passwd)
+INFO:root:add route GET /blog/{id} => get_blog(id)
+INFO:root:add route GET / => index(page)
+INFO:root:add route GET /manage/ => manage()
+INFO:root:add route GET /manage/blogs => manage_blogs(page)
+INFO:root:add route GET /manage/comments => manage_comments(page)
+INFO:root:add route GET /manage/blogs/create => manage_create_blog()
+INFO:root:add route GET /manage/blogs/edit => manage_edit_blog(id)
+INFO:root:add route GET /manage/users => manage_users(page)
+INFO:root:add route GET /register => register()
+INFO:root:add route GET /signin => signin()
+INFO:root:add route GET /signout => signout(request)
+INFO:root:add static /static/ => /home/ubuntu/python-web/www/static
+INFO:root:server started at http://127.0.0.1:9000...
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f5a6c43ecf0>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdd1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f5a6bbdd158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_id`, `created_at`, `user_name`, `name`, `content`, `user_image`, `summary` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, 'blogs': [{'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465634082.40179, 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'name': '111', 'summary': '111111111111', 'content': '1111111111111111', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465632830.38918, 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'name': 'test', 'summary': '44', 'content': '44', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465568962.27501, 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'name': '11', 'summary': '11', 'content': '111', 'user_image': 'about:blank', 'user_name': 'ww'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465567528.94303, 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'name': '王晓东', 'summary': '111111111111111111', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'user_name': 'ww'}], '__template__': 'blogs.html'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:01:31 +0000] "GET / HTTP/1.0" 200 5626 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f5a6c43eaf8>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdd1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f5a6bbdd158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_id`, `created_at`, `user_name`, `name`, `content`, `user_image`, `summary` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, 'blogs': [{'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465634082.40179, 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'name': '111', 'summary': '111111111111', 'content': '1111111111111111', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465632830.38918, 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'name': 'test', 'summary': '44', 'content': '44', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465568962.27501, 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'name': '11', 'summary': '11', 'content': '111', 'user_image': 'about:blank', 'user_name': 'ww'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465567528.94303, 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'name': '王晓东', 'summary': '111111111111111111', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'user_name': 'ww'}], '__template__': 'blogs.html'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:01:38 +0000] "GET / HTTP/1.0" 200 5626 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f5a6c43ea68>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdd1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f5a6bbdd158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_id`, `created_at`, `user_name`, `name`, `content`, `user_image`, `summary` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, 'blogs': [{'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465634082.40179, 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'name': '111', 'summary': '111111111111', 'content': '1111111111111111', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465632830.38918, 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'name': 'test', 'summary': '44', 'content': '44', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465568962.27501, 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'name': '11', 'summary': '11', 'content': '111', 'user_image': 'about:blank', 'user_name': 'ww'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465567528.94303, 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'name': '王晓东', 'summary': '111111111111111111', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'user_name': 'ww'}], '__template__': 'blogs.html'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:03 +0000] "GET / HTTP/1.0" 200 5626 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f5a6c43efc0>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdd1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f5a6bbdd158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_id`, `created_at`, `user_name`, `name`, `content`, `user_image`, `summary` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, 'blogs': [{'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465634082.40179, 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'name': '111', 'summary': '111111111111', 'content': '1111111111111111', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465632830.38918, 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'name': 'test', 'summary': '44', 'content': '44', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465568962.27501, 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'name': '11', 'summary': '11', 'content': '111', 'user_image': 'about:blank', 'user_name': 'ww'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465567528.94303, 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'name': '王晓东', 'summary': '111111111111111111', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'user_name': 'ww'}], '__template__': 'blogs.html'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:07 +0000] "GET / HTTP/1.0" 200 5626 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET /blog/0014656340824025d61ba73695044b8acba8e8cbf481640000 
+INFO:root:<generator object text at 0x7f5a6c43eaf8>
+INFO:root:check user: GET /blog/0014656340824025d61ba73695044b8acba8e8cbf481640000
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdd0d0>
+INFO:root:call with args: {'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000'}
+INFO:root:<function get_blog at 0x7f5a6bbdd048>
+INFO:root:SQL: select `id`,  `user_id`, `created_at`, `user_name`, `name`, `content`, `user_image`, `summary` from `blogs` where `id`=? 
+INFO:root:rows returned: 1
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:SQL: select `id`,  `user_id`, `created_at`, `blog_id`, `user_name`, `content`, `user_image` from `comments` where blog_id=? order by created_at desc 
+INFO:root:rows returned: 0
+INFO:root:<class 'dict'>
+INFO:root:r = {'comments': [], 'blog': {'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465634082.40179, 'html_content': '<p>1111111111111111</p>\n', 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'name': '111', 'summary': '111111111111', 'content': '1111111111111111', 'user_image': 'about:blank', 'user_name': '123'}, '__template__': 'blog.html'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:11 +0000] "GET /blog/0014656340824025d61ba73695044b8acba8e8cbf481640000 HTTP/1.0" 200 4604 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f5a6c43ec18>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdd1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f5a6bbdd158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_id`, `created_at`, `user_name`, `name`, `content`, `user_image`, `summary` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, 'blogs': [{'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465634082.40179, 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'name': '111', 'summary': '111111111111', 'content': '1111111111111111', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465632830.38918, 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'name': 'test', 'summary': '44', 'content': '44', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465568962.27501, 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'name': '11', 'summary': '11', 'content': '111', 'user_image': 'about:blank', 'user_name': 'ww'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465567528.94303, 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'name': '王晓东', 'summary': '111111111111111111', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'user_name': 'ww'}], '__template__': 'blogs.html'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:21 +0000] "GET / HTTP/1.0" 200 5626 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET /signin 
+INFO:root:<generator object text at 0x7f5a6c43ebd0>
+INFO:root:check user: GET /signin
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdda60>
+INFO:root:call with args: {}
+INFO:root:<function signin at 0x7f5a6bbdd9d8>
+INFO:root:<class 'dict'>
+INFO:root:r = {'__template__': 'signin.html'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:24 +0000] "GET /signin HTTP/1.0" 200 2967 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET /api/users 
+INFO:root:<generator object text at 0x7f5a6c43eca8>
+INFO:root:check user: GET /api/users
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6c44fbf8>
+INFO:root:call with args: {}
+INFO:root:<function api_get_users at 0x7f5a6c44fb70>
+INFO:root:SQL: select count(id) _num_ from `users`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `email`, `created_at`, `name`, `admin`, `image`, `passwd` from `users` order by created_at desc 
+INFO:root:rows returned: 3
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 3, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, 'users': [{'email': '123@qq.com', 'created_at': 1465632816.19337, 'id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'name': '123', 'admin': 0, 'image': 'about:blank', 'passwd': '*****'}, {'email': '11@qq.com', 'created_at': 1465632608.5865, 'id': '0014656326085844897466447664b388d62c569888e549e000', 'name': '11', 'admin': 0, 'image': 'about:blank', 'passwd': '*****'}, {'email': 'wxd@example.com', 'created_at': 1465624002.18024, 'id': '001465624002221badc575eb9e447b9b7455bb02c105af9000', 'name': 'wxd', 'admin': 1, 'image': 'about:blank', 'passwd': '*****'}]}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:33 +0000] "GET /api/users HTTP/1.0" 200 720 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f5a6c43ec18>
+INFO:root:check user: GET /
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdd1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f5a6bbdd158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_id`, `created_at`, `user_name`, `name`, `content`, `user_image`, `summary` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, 'blogs': [{'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465634082.40179, 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'name': '111', 'summary': '111111111111', 'content': '1111111111111111', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465632830.38918, 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'name': 'test', 'summary': '44', 'content': '44', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465568962.27501, 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'name': '11', 'summary': '11', 'content': '111', 'user_image': 'about:blank', 'user_name': 'ww'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465567528.94303, 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'name': '王晓东', 'summary': '111111111111111111', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'user_name': 'ww'}], '__template__': 'blogs.html'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:39 +0000] "GET / HTTP/1.0" 200 5626 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET /manage/ 
+INFO:root:<generator object text at 0x7f5a6c43ec60>
+INFO:root:check user: GET /manage/
+INFO:root:{}
+INFO:root:None
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:41 +0000] "GET /manage/ HTTP/1.0" 302 10 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET /signin 
+INFO:root:<generator object text at 0x7f5a6c43efc0>
+INFO:root:check user: GET /signin
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdda60>
+INFO:root:call with args: {}
+INFO:root:<function signin at 0x7f5a6bbdd9d8>
+INFO:root:<class 'dict'>
+INFO:root:r = {'__template__': 'signin.html'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:41 +0000] "GET /signin HTTP/1.0" 200 2967 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: POST /api/authenticate 
+INFO:root:<generator object text at 0x7f5a6bbef1f8>
+INFO:root:check user: POST /api/authenticate
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6c44ff28>
+INFO:root:{'email': '12@qq.com', 'passwd': '0c674dfdd29f78e1605e8df1b1abd40cff0a379a'}
+INFO:root:call with args: {'email': '12@qq.com', 'passwd': '0c674dfdd29f78e1605e8df1b1abd40cff0a379a'}
+INFO:root:<function authenticate at 0x7f5a6c44fea0>
+INFO:root:SQL: select `id`,  `email`, `created_at`, `name`, `admin`, `image`, `passwd` from `users` where email=? 
+INFO:root:rows returned: 0
+INFO:root:<class 'dict'>
+INFO:root:r = {'message': 'Email not exits', 'error': 'value:invalid', 'data': 'email'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:50 +0000] "POST /api/authenticate HTTP/1.0" 200 73 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: POST /api/authenticate 
+INFO:root:<generator object text at 0x7f5a6bbefca8>
+INFO:root:check user: POST /api/authenticate
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6c44ff28>
+INFO:root:{'email': '123@qq.com', 'passwd': 'b4e7ed93d18f0de3d0095d483c2fc0360a222512'}
+INFO:root:call with args: {'email': '123@qq.com', 'passwd': 'b4e7ed93d18f0de3d0095d483c2fc0360a222512'}
+INFO:root:<function authenticate at 0x7f5a6c44fea0>
+INFO:root:SQL: select `id`,  `email`, `created_at`, `name`, `admin`, `image`, `passwd` from `users` where email=? 
+INFO:root:rows returned: 1
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'aiohttp.web_reqrep.Response'>
+INFO:root:r = <Response OK not started>
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:54 +0000] "POST /api/authenticate HTTP/1.0" 200 185 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET / 
+INFO:root:<generator object text at 0x7f5a6c43eca8>
+INFO:root:check user: GET /
+INFO:root:{'web_session': '001465632816190ac34a1446f404850b8e942387e282b53000-1465869774-a2bc9f9167bb955992f1a5a573574b11ce9347da'}
+INFO:root:SQL: select `id`,  `email`, `created_at`, `name`, `admin`, `image`, `passwd` from `users` where `id`=? 
+INFO:root:rows returned: 1
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:set current user: 123@qq.com
+INFO:root:{'email': '123@qq.com', 'created_at': 1465632816.19337, 'id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'name': '123', 'admin': 0, 'image': 'about:blank', 'passwd': '******'}
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdd1e0>
+INFO:root:call with args: {}
+INFO:root:<function index at 0x7f5a6bbdd158>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_id`, `created_at`, `user_name`, `name`, `content`, `user_image`, `summary` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, 'blogs': [{'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465634082.40179, 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'name': '111', 'summary': '111111111111', 'content': '1111111111111111', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465632830.38918, 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'name': 'test', 'summary': '44', 'content': '44', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465568962.27501, 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'name': '11', 'summary': '11', 'content': '111', 'user_image': 'about:blank', 'user_name': 'ww'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465567528.94303, 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'name': '王晓东', 'summary': '111111111111111111', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'user_name': 'ww'}], '__template__': 'blogs.html'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:54 +0000] "GET / HTTP/1.0" 200 5902 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET /manage/ 
+INFO:root:<generator object text at 0x7f5a6c43ebd0>
+INFO:root:check user: GET /manage/
+INFO:root:{'web_session': '001465632816190ac34a1446f404850b8e942387e282b53000-1465869774-a2bc9f9167bb955992f1a5a573574b11ce9347da'}
+INFO:root:SQL: select `id`,  `email`, `created_at`, `name`, `admin`, `image`, `passwd` from `users` where `id`=? 
+INFO:root:rows returned: 1
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:set current user: 123@qq.com
+INFO:root:{'email': '123@qq.com', 'created_at': 1465632816.19337, 'id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'name': '123', 'admin': 0, 'image': 'about:blank', 'passwd': '******'}
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdd2f0>
+INFO:root:call with args: {}
+INFO:root:<function manage at 0x7f5a6bbdd268>
+INFO:root:<class 'str'>
+INFO:root:r = redirect:/manage/comments
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:58 +0000] "GET /manage/ HTTP/1.0" 302 10 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET /manage/comments 
+INFO:root:<generator object text at 0x7f5a6bbef7e0>
+INFO:root:check user: GET /manage/comments
+INFO:root:{'web_session': '001465632816190ac34a1446f404850b8e942387e282b53000-1465869774-a2bc9f9167bb955992f1a5a573574b11ce9347da'}
+INFO:root:SQL: select `id`,  `email`, `created_at`, `name`, `admin`, `image`, `passwd` from `users` where `id`=? 
+INFO:root:rows returned: 1
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:set current user: 123@qq.com
+INFO:root:{'email': '123@qq.com', 'created_at': 1465632816.19337, 'id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'name': '123', 'admin': 0, 'image': 'about:blank', 'passwd': '******'}
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdd510>
+INFO:root:call with args: {}
+INFO:root:<function manage_comments at 0x7f5a6bbdd488>
+INFO:root:<class 'dict'>
+INFO:root:r = {'page_index': 1, '__template__': 'manage_comments.html'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:58 +0000] "GET /manage/comments HTTP/1.0" 200 5865 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET /api/comments 
+INFO:root:<generator object text at 0x7f5a6bbefd38>
+INFO:root:check user: GET /api/comments
+INFO:root:{'web_session': '001465632816190ac34a1446f404850b8e942387e282b53000-1465869774-a2bc9f9167bb955992f1a5a573574b11ce9347da'}
+INFO:root:SQL: select `id`,  `email`, `created_at`, `name`, `admin`, `image`, `passwd` from `users` where `id`=? 
+INFO:root:rows returned: 1
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:set current user: 123@qq.com
+INFO:root:{'email': '123@qq.com', 'created_at': 1465632816.19337, 'id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'name': '123', 'admin': 0, 'image': 'about:blank', 'passwd': '******'}
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6c431510>
+INFO:root:call with args: {'page': '1'}
+INFO:root:<function api_comments at 0x7f5a6c431598>
+INFO:root:SQL: select count(id) _num_ from `comments`  
+INFO:root:rows returned: 1
+INFO:root:<class 'dict'>
+INFO:root:r = {'comments': (), 'page': item_count: 0, page_count: 0, page_index: 1, page_size: 10, offset: 0, limit: 0}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:02:58 +0000] "GET /api/comments?page=1 HTTP/1.0" 200 161 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET /manage/blogs 
+INFO:root:<generator object text at 0x7f5a6bbefd38>
+INFO:root:check user: GET /manage/blogs
+INFO:root:{'web_session': '001465632816190ac34a1446f404850b8e942387e282b53000-1465869774-a2bc9f9167bb955992f1a5a573574b11ce9347da'}
+INFO:root:SQL: select `id`,  `email`, `created_at`, `name`, `admin`, `image`, `passwd` from `users` where `id`=? 
+INFO:root:rows returned: 1
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:set current user: 123@qq.com
+INFO:root:{'email': '123@qq.com', 'created_at': 1465632816.19337, 'id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'name': '123', 'admin': 0, 'image': 'about:blank', 'passwd': '******'}
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdd400>
+INFO:root:call with args: {}
+INFO:root:<function manage_blogs at 0x7f5a6bbdd378>
+INFO:root:<class 'dict'>
+INFO:root:r = {'page_index': 1, '__template__': 'manage_blogs.html'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:03:00 +0000] "GET /manage/blogs HTTP/1.0" 200 6142 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET /api/blogs 
+INFO:root:<generator object text at 0x7f5a6c43ec18>
+INFO:root:check user: GET /api/blogs
+INFO:root:{'web_session': '001465632816190ac34a1446f404850b8e942387e282b53000-1465869774-a2bc9f9167bb955992f1a5a573574b11ce9347da'}
+INFO:root:SQL: select `id`,  `email`, `created_at`, `name`, `admin`, `image`, `passwd` from `users` where `id`=? 
+INFO:root:rows returned: 1
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:set current user: 123@qq.com
+INFO:root:{'email': '123@qq.com', 'created_at': 1465632816.19337, 'id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'name': '123', 'admin': 0, 'image': 'about:blank', 'passwd': '******'}
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6c7342f0>
+INFO:root:call with args: {'page': '1'}
+INFO:root:<function api_blogs at 0x7f5a6c72a620>
+INFO:root:SQL: select count(id) _num_ from `blogs`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `user_id`, `created_at`, `user_name`, `name`, `content`, `user_image`, `summary` from `blogs` order by created_at desc limit ?, ? 
+INFO:root:rows returned: 4
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 4, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, 'blogs': [{'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465634082.40179, 'id': '0014656340824025d61ba73695044b8acba8e8cbf481640000', 'name': '111', 'summary': '111111111111', 'content': '1111111111111111', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'created_at': 1465632830.38918, 'id': '001465632830392c815ef9908a04defac1293645de41157000', 'name': 'test', 'summary': '44', 'content': '44', 'user_image': 'about:blank', 'user_name': '123'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465568962.27501, 'id': '0014655689622751becfe70e7bd445c9eaac8c5891fc07c000', 'name': '11', 'summary': '11', 'content': '111', 'user_image': 'about:blank', 'user_name': 'ww'}, {'user_id': '001465492420780e8d2126919a148dc8b869c4c91a2b929000', 'created_at': 1465567528.94303, 'id': '0014655675289439b8de99a9b5e4c12971d08016e157db2000', 'name': '王晓东', 'summary': '111111111111111111', 'content': '111111111111111111111111', 'user_image': 'about:blank', 'user_name': 'ww'}]}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:03:01 +0000] "GET /api/blogs?page=1 HTTP/1.0" 200 1252 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET /manage/users 
+INFO:root:<generator object text at 0x7f5a6c43ec18>
+INFO:root:check user: GET /manage/users
+INFO:root:{'web_session': '001465632816190ac34a1446f404850b8e942387e282b53000-1465869774-a2bc9f9167bb955992f1a5a573574b11ce9347da'}
+INFO:root:SQL: select `id`,  `email`, `created_at`, `name`, `admin`, `image`, `passwd` from `users` where `id`=? 
+INFO:root:rows returned: 1
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:set current user: 123@qq.com
+INFO:root:{'email': '123@qq.com', 'created_at': 1465632816.19337, 'id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'name': '123', 'admin': 0, 'image': 'about:blank', 'passwd': '******'}
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6bbdd840>
+INFO:root:call with args: {}
+INFO:root:<function manage_users at 0x7f5a6bbdd7b8>
+INFO:root:<class 'dict'>
+INFO:root:r = {'page_index': 1, '__template__': 'manage_users.html'}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:03:03 +0000] "GET /manage/users HTTP/1.0" 200 5159 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET /api/users 
+INFO:root:<generator object text at 0x7f5a6b3c12d0>
+INFO:root:check user: GET /api/users
+INFO:root:{'web_session': '001465632816190ac34a1446f404850b8e942387e282b53000-1465869774-a2bc9f9167bb955992f1a5a573574b11ce9347da'}
+INFO:root:SQL: select `id`,  `email`, `created_at`, `name`, `admin`, `image`, `passwd` from `users` where `id`=? 
+INFO:root:rows returned: 1
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:set current user: 123@qq.com
+INFO:root:{'email': '123@qq.com', 'created_at': 1465632816.19337, 'id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'name': '123', 'admin': 0, 'image': 'about:blank', 'passwd': '******'}
+INFO:root:Response Handler...
+INFO:root:<function coroutine.<locals>.coro at 0x7f5a6c44fbf8>
+INFO:root:call with args: {'page': '1'}
+INFO:root:<function api_get_users at 0x7f5a6c44fb70>
+INFO:root:SQL: select count(id) _num_ from `users`  
+INFO:root:rows returned: 1
+INFO:root:SQL: select `id`,  `email`, `created_at`, `name`, `admin`, `image`, `passwd` from `users` order by created_at desc 
+INFO:root:rows returned: 3
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:ttttttttttttttttttttttttttt
+INFO:root:<class 'dict'>
+INFO:root:r = {'page': item_count: 3, page_count: 1, page_index: 1, page_size: 10, offset: 0, limit: 10, 'users': [{'email': '123@qq.com', 'created_at': 1465632816.19337, 'id': '001465632816190ac34a1446f404850b8e942387e282b53000', 'name': '123', 'admin': 0, 'image': 'about:blank', 'passwd': '*****'}, {'email': '11@qq.com', 'created_at': 1465632608.5865, 'id': '0014656326085844897466447664b388d62c569888e549e000', 'name': '11', 'admin': 0, 'image': 'about:blank', 'passwd': '*****'}, {'email': 'wxd@example.com', 'created_at': 1465624002.18024, 'id': '001465624002221badc575eb9e447b9b7455bb02c105af9000', 'name': 'wxd', 'admin': 1, 'image': 'about:blank', 'passwd': '*****'}]}
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:03:03 +0000] "GET /api/users?page=1 HTTP/1.0" 200 720 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+INFO:root:Request: GET /azenv.php 
+INFO:root:<generator object text at 0x7f5a6b3c13f0>
+INFO:root:check user: GET /azenv.php
+INFO:root:{}
+INFO:root:None
+INFO:root:Response Handler...
+INFO:root:<bound method SystemRoute._handler of <SystemRoute 404: Not Found>>
+INFO:aiohttp.access:127.0.0.1 - - [13/Jun/2016:02:09:55 +0000] "GET /azenv.php HTTP/1.0" 404 14 "-" "Mozilla/5.0 (compatible; MSIE 6.0; Windows NT 5.1; Trident/5.0)"
